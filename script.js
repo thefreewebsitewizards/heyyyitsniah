@@ -30,6 +30,10 @@ function initializeLoading() {
     const heroBackground = document.querySelector('.hero-background');
     const heroContent = document.querySelector('.hero-content');
     
+    // Lock scrolling immediately when loading screen is active
+    document.documentElement.classList.add('scroll-locked');
+    document.body.classList.add('scroll-locked');
+    
     // Ensure hero content is initially hidden
     if (heroContent) {
         heroContent.style.opacity = '0';
@@ -70,7 +74,7 @@ function initializeLoading() {
     
     function checkLoadingComplete() {
         if (assetsLoaded && pageLoaded) {
-            // Minimum loading time of 2 seconds for better UX
+            // Minimum loading time of 1 second for better UX
             setTimeout(() => {
                 // Start hiding loading screen
                 loadingScreen.classList.add('hidden');
@@ -101,11 +105,14 @@ function initializeLoading() {
                      }, 500);
                 }, 400);
                 
-                // Remove loading screen from DOM
+                // Remove loading screen from DOM and unlock scrolling
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
+                    // Unlock scrolling after loading screen is completely removed
+                    document.documentElement.classList.remove('scroll-locked');
+                    document.body.classList.remove('scroll-locked');
                 }, 800);
-            }, 2000);
+            }, 1500);
         }
     }
 }
