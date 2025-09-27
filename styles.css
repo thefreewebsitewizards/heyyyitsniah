@@ -366,7 +366,9 @@ body.scroll-locked {
     height: 2px;
     background: var(--accent-color);
     margin: 2px 0;
-    transition: var(--transition-fast);
+    transform-origin: center;
+    will-change: transform, opacity, width;
+    transition: transform 360ms cubic-bezier(0.4, 0, 0.2, 1), opacity 280ms ease, width 320ms ease;
     border-radius: 2px;
     display: block;
 }
@@ -2660,15 +2662,16 @@ section {
     }
     
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(4px, 4px);
+        transform: translateY(6px) rotate(45deg);
     }
     
     .hamburger.active span:nth-child(2) {
         opacity: 0;
+        transform: scaleX(0.2);
     }
     
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: translateY(-6px) rotate(-45deg);
     }
 
     /* Full-Screen Navigation Overlay */
@@ -2706,6 +2709,14 @@ section {
         visibility: visible;
         display: block !important;
         pointer-events: auto;
+    }
+
+    /* Smooth fade-out on close while keeping display until transition completes */
+    .nav-overlay.closing {
+        opacity: 0;
+        visibility: hidden;
+        display: block !important;
+        pointer-events: none;
     }
 
     /* Ensure overlay children are visible when active, without overriding layout */
@@ -2892,6 +2903,14 @@ section {
     .nav-overlay-social-link i {
         font-size: clamp(16px, 5vw, 20px);
         line-height: 1;
+    }
+
+    /* Reduce Threads image size in hamburger menu overlay (image only) */
+    .nav-overlay-social .threads-logo {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
     }
 
     .nav-overlay-tagline p {

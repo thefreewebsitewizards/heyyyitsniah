@@ -193,22 +193,27 @@ function initializeNavigation() {
     const navOverlayClose = document.getElementById('navOverlayClose');
     const navOverlayLinks = document.querySelectorAll('.nav-overlay-link');
     
-    // Full-screen overlay toggle
+    // Full-screen overlay toggle with smooth close animation
     hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        document.body.style.overflow = navOverlay.classList.contains('active') ? 'hidden' : 'auto';
+        const isOpen = navOverlay.classList.contains('active');
         
-        // Update aria-hidden for accessibility
-        navOverlay.setAttribute('aria-hidden', !navOverlay.classList.contains('active'));
-        
-        // Focus management for accessibility
-        if (navOverlay.classList.contains('active')) {
-            // Focus the first navigation link when overlay opens
+        if (!isOpen) {
+            hamburger.classList.add('active');
+            navOverlay.classList.add('active');
+            navOverlay.classList.remove('closing');
+            document.body.style.overflow = 'hidden';
+            
+            // Update accessibility states
+            navOverlay.setAttribute('aria-hidden', 'false');
+            hamburger.setAttribute('aria-expanded', 'true');
+            
+            // Focus management on open
             setTimeout(() => {
                 const firstLink = navOverlay.querySelector('.nav-overlay-link');
                 if (firstLink) firstLink.focus();
             }, 300);
+        } else {
+            closeNavOverlay();
         }
     });
     
@@ -233,15 +238,23 @@ function initializeNavigation() {
     
     // Close overlay function
     function closeNavOverlay() {
-        hamburger.classList.remove('active');
-        navOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        // Begin fade-out while keeping overlay displayed
+        navOverlay.classList.add('closing');
+        hamburger.setAttribute('aria-expanded', 'false');
         
-        // Update aria-hidden for accessibility
-        navOverlay.setAttribute('aria-hidden', 'true');
-        
-        // Return focus to hamburger button
-        hamburger.focus();
+        // Complete close after transition duration (matches CSS 600ms)
+        setTimeout(() => {
+            navOverlay.classList.remove('active');
+            navOverlay.classList.remove('closing');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Update aria-hidden for accessibility
+            navOverlay.setAttribute('aria-hidden', 'true');
+            
+            // Return focus to hamburger button
+            hamburger.focus();
+        }, 600);
     }
     
     // Trap focus within overlay when active
