@@ -866,6 +866,7 @@ body.scroll-locked {
     .hero-secondary-copy {
         font-size: 0.95rem;
         line-height: 1.7;
+        padding: 0 24px; /* Increase horizontal padding for mobile readability */
     }
 }
 
