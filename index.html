@@ -48,29 +48,12 @@
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress"></div>
     
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>Shaniah Dames</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Media</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Primary Hero Section -->
+    <section class="hero-primary">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="Videos/14.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-background">
         </div>
         <div class="hero-content">
@@ -92,12 +75,109 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="1000">
+        <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="1000">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
             </div>
             <p>Scroll to explore</p>
-        </div> -->
+        </div>
+    </section>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Shaniah Dames</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Media</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Navigation Overlay -->
+    <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Main navigation" aria-hidden="true">
+        <div class="nav-overlay-content">
+            <div class="nav-overlay-header">
+                <button class="nav-overlay-close" id="navOverlayClose" aria-label="Close navigation menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="nav-overlay-menu" role="navigation" aria-label="Main navigation">
+                <ul class="nav-overlay-list" role="list">
+                    <li class="nav-overlay-item" role="listitem">
+                        <a href="#home" class="nav-overlay-link" role="menuitem">
+                            <span class="nav-overlay-number">01</span>
+                            <span class="nav-overlay-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-overlay-item" role="listitem">
+                        <a href="#about" class="nav-overlay-link" role="menuitem">
+                            <span class="nav-overlay-number">02</span>
+                            <span class="nav-overlay-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-overlay-item" role="listitem">
+                        <a href="#services" class="nav-overlay-link" role="menuitem">
+                            <span class="nav-overlay-number">03</span>
+                            <span class="nav-overlay-text">Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-overlay-item" role="listitem">
+                        <a href="#portfolio" class="nav-overlay-link" role="menuitem">
+                            <span class="nav-overlay-number">04</span>
+                            <span class="nav-overlay-text">Media</span>
+                        </a>
+                    </li>
+                    <li class="nav-overlay-item" role="listitem">
+                        <a href="#contact" class="nav-overlay-link" role="menuitem">
+                            <span class="nav-overlay-number">05</span>
+                            <span class="nav-overlay-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-overlay-footer">
+                <div class="nav-overlay-social" role="group" aria-label="Social media links">
+                    <a href="#" class="nav-overlay-social-link" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="nav-overlay-social-link" aria-label="Follow us on TikTok">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="nav-overlay-social-link" aria-label="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="nav-overlay-tagline">
+                    <p>Beauty • Wellness • Lifestyle Content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Secondary Hero Section with Parallax -->
+    <section id="home" class="hero-secondary" data-aos="fade-in">
+        <div class="parallax-container">
+            <div class="parallax-image"></div>
+            <div class="parallax-overlay"></div>
+        </div>
+        <!-- Secondary Hero Content -->
+        <div class="hero-content hero-secondary-content" role="region" aria-label="Featured message" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+            <h2 class="hero-secondary-title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">Beauty, Wellness, and Lifestyle — Crafted in 4K</h2>
+            <p class="hero-secondary-copy" data-aos="fade-up" data-aos-delay="120" data-aos-duration="700">Authentic UGC and polished product reviews that elevate your brand. From engaging reels to tailored concepts, I create content that connects with your audience and meets campaign goals.</p>
+            <a href="#services" class="cta-button" aria-label="Explore services" data-aos="fade-up" data-aos-delay="240" data-aos-duration="700">Explore What I Offer</a>
+        </div>
     </section>
     
     <!-- About Section -->
@@ -121,7 +201,7 @@
                 </div>
                 <div class="about-image" data-aos="fade-left" data-aos-delay="400">
                     <div class="image-container">
-                        <img src="Images/Profile.jpg" alt="Shaniah Johnson - Content Creator" class="profile-image">
+                        <img src="Images/gallery/Picture2.png" alt="Shaniah Johnson - Content Creator" class="profile-image">
                     </div>
                 </div>
             </div>
@@ -215,580 +295,62 @@
         <div class="desktop-phone-marquee" data-aos="fade-up" data-aos-delay="100">
                 <div class="marquee-container">
                     <div class="marquee-track">
-                    <!-- Phone 1 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline autoplay>
-                                    <source src="Videos/1.mp4" type="video/mp4">
-                                </video>
+                        <!-- Desktop: show five phone videos side by side -->
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-home-btn"></div>
+                                <div class="phone-screen">
+                                    <video class="carousel-video" muted loop playsinline autoplay>
+                                        <source src="Videos/1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Phone 2 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/2.mp4" type="video/mp4">
-                                </video>
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-home-btn"></div>
+                                <div class="phone-screen">
+                                    <video class="carousel-video" muted loop playsinline>
+                                        <source src="Videos/2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                             </div>
                         </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">2</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 3 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/3.mp4" type="video/mp4">
-                                </video>
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-home-btn"></div>
+                                <div class="phone-screen">
+                                    <video class="carousel-video" muted loop playsinline>
+                                        <source src="Videos/3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                             </div>
                         </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">3</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 4 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/4.mp4" type="video/mp4">
-                                </video>
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-home-btn"></div>
+                                <div class="phone-screen">
+                                    <video class="carousel-video" muted loop playsinline>
+                                        <source src="Videos/4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                             </div>
                         </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">4</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 5 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/5.mp4" type="video/mp4">
-                                </video>
+                        <div class="phone-container">
+                            <div class="phone-frame">
+                                <div class="phone-speaker"></div>
+                                <div class="phone-home-btn"></div>
+                                <div class="phone-screen">
+                                    <video class="carousel-video" muted loop playsinline>
+                                        <source src="Videos/5.mp4" type="video/mp4">
+                                    </video>
+                                </div>
                             </div>
                         </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">5</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 6 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/6.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">6</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 7 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/7.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">7</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 8 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/8.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">8</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 9 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/9.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">9</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 10 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/10.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">10</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 11 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/11.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">11</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 12 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/12.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">12</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 13 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/13.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">13</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 14 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/14.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">14</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 15 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/15.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">15</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 16 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/16.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">16</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 17 -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/17.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">17</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Duplicate phones for seamless marquee loop -->
-                    <!-- Phone 1 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/1.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">1</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 2 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/2.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">2</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 3 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/3.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">3</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 4 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/4.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">4</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 5 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/5.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">5</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 6 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/6.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">6</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 7 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/7.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">7</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 8 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/8.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">8</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 9 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/9.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">9</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 10 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/10.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">10</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 11 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/11.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">11</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 12 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/12.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">12</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 13 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/13.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">13</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 14 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/14.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">14</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 15 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/15.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">15</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 16 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/16.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">16</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone 17 (Duplicate) -->
-                    <div class="phone-container">
-                        <div class="phone-frame">
-                            <div class="phone-speaker"></div>
-                            <div class="phone-home-btn"></div>
-                            <div class="phone-screen">
-                                <video class="carousel-video" muted loop playsinline>
-                                    <source src="Videos/17.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Video Counter -->
-                        <div class="video-counter">
-                            <span class="current-video">17</span> / <span class="total-videos">17</span>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -827,71 +389,11 @@
                                         <source src="Videos/5.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/6.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/7.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/8.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/9.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/10.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/11.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/12.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/13.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/14.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/15.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/16.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-slide">
-                                    <video class="carousel-video" muted loop playsinline>
-                                        <source src="Videos/17.mp4" type="video/mp4">
-                                    </video>
-                                </div>
                             </div>
                             
                             <!-- Video Counter -->
                             <div class="video-counter">
-                                <span class="current-video">1</span> / <span class="total-videos">17</span>
+                                <span class="current-video">1</span> / <span class="total-videos">5</span>
                             </div>
                         </div>
                     </div>
@@ -1130,7 +632,7 @@
             <!-- Header with close button and counter -->
             <div class="video-modal-header">
                 <div class="video-counter">
-                    <span id="currentVideoIndex">1</span> / <span id="totalVideos">17</span>
+                    <span id="currentVideoIndex">1</span> / <span id="totalVideos">5</span>
                 </div>
                 <button class="video-modal-close" aria-label="Close video modal">
                     <i class="fas fa-times"></i>
